@@ -11,6 +11,10 @@ Configure database connection details in application.properties file.
 
 3.API Documentation: 
 
+
+Get All Employees:
+URL: GET /employees/getAll
+
 Add Employee:
 URL: POST /employees/add
 Input JSON Structure:
@@ -21,12 +25,6 @@ Input JSON Structure:
   "reportsTo": 1,
   "profileImage": "path/to/image.jpg"
 }
-
-Get All Employees:
-URL: GET /employees/getAll
-
-Delete Employee:
-URL: DELETE /employees/deleteId?id={employeeId}
 
 Update Employee:
 URL: PUT /employees/update/{id}
@@ -39,8 +37,11 @@ Input JSON Structure:
   "profileImage": "path/to/updated_image.jpg"
 }
 
-Get Nth Level Manager:
-URL: GET /employees/nthLevelManager?employeeId={employeeId}&level={n}
+Delete Employee:
+URL: DELETE /employees/deleteId?id={employeeId}
 
 Get Paging Employees:
 URL: GET /employees/getPagingEmployees?pageNumber={pageNumber}&pageSize={pageSize}&sortBy={sortBy}
+
+Get Nth Level Manager:
+URL: GET /employees/nthLevelManager?employeeId={employeeId}&level={n}
